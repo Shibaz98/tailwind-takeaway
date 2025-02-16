@@ -1,11 +1,20 @@
-import logo from './logo.svg';
+import { Route, Router, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import './App.css';
+import Root from './Components/Root';
+
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<Root/>}>
+      
+    </Route>
+  )
+)
 
 function App() {
   return (
-    <div class='flex items-center mx-10 border-s-purple-700'>
-      <h1 class='text-3xl font-bold text-fuchsia-700'>React App</h1> 
-      <h2 class='p-30 border-s-black border-solid'>Test</h2>
+    <div className="rootLayout">
+      <RouterProvider router={router}/>
     </div>
   );
 }
