@@ -3,6 +3,7 @@ import { NavLink, Outlet } from "react-router-dom"
 
 export default function Root() {
   return (
+    <div>
     <div className="shadow-xl">
         <header className=" flex items-center justify-between p-4">
             <img src="/images/logo.png" alt="" className="w-32 ml-4"/>
@@ -39,7 +40,8 @@ export default function Root() {
                 Sandwiches
             </NavLink>
         </div>
-        <Outlet/>
+    </div>
+    <Outlet/>
     </div>
   )
 }
